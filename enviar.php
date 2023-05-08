@@ -1,11 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Enviar formulario</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/output.css" />
+    <link rel="shortcut icon" href="./img/minimal-blue.png" />
+	<title>Muchas Gracias - Minimal</title>
 </head>
-
-<body>
+<body class="bg-azul flex justify-center items-center">
 <?php
 
 //se arma el array POST
@@ -23,13 +26,25 @@ $header="From: ".$nombre."<".$email.">";
 $enviado = mail($destino,$asunto,$mensaje,$header);
 
 if($enviado == true){
-	echo "Su correo ha sido enviado.";
+	echo "<div class='flex flex-col items-center gap-spacerS text-crema text-center'>
+	<h1 class='text-fontL font-bold'>Gracias por contactarse!</h1>
+	<p class='text-fontS'>En los proximos días recibirás una respuesta via mail</p>
+	<a href='./index.html' class='bg-crema text-azul font-bold hover:text-crema hover:bg-azul px-[1rem] py-[0.2rem] border-4 border-crema hover:border-crema transition-all duration-300 rounded w-[180px] text-center'>Regresar</a>
+</div>";
 }else{
-	echo "Hubo un error en el envio del mail.";
+	echo "<div class='flex flex-col items-center gap-spacerS text-crema text-center'>
+	<h1 class='text-fontL font-bold'>¡Ocurrió un error!</h1>
+	<a href='./index.html' class='bg-crema text-azul font-bold hover:text-crema hover:bg-azul px-[1rem] py-[0.2rem] border-4 border-crema hover:border-crema transition-all duration-300 rounded w-[180px] text-center'>Regresar</a>
+</div>";
 }
 
 $conexion = mysqli_connect("localhost","root","", "pd3") or die('No se pudo conectar al servidor');
 $consulta = mysqli_query($conexion, "INSERT INTO contactos (nombre,email,localidad,comentario)VALUES ( '$nombre','$email','$localidad','$comentario')") or die(mysqli_error($conexion));
 ?>
+
+<?php if($enviado == true){ ?>
+
+<?php } ?>
+
 </body>
 </html>
