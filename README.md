@@ -1,3 +1,2 @@
-## Producción Digital III
 # Minimal
-Joaquin Mesa
+Joaquin Mesa - Produccion Digital III
