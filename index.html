@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="shortcut icon" href="./img/minimal-blue.png" />
+    <title>Home - Minimal</title>
+  </head>
+  <body class="font-poppins">
+    <!-- HEADER -->
+    <header
+      class="flex justify-between p-spacerS bg-azul fixed w-full z-20 border-b-2 border-crema"
+    >
+      <figure class="max-w-[80px]">
+        <a href="./index.html">
+          <img
+            src="./img/minimal-cream.png"
+            alt="logo"
+            class="hover:scale-110 duration-300"
+          />
+        </a>
+      </figure>
+      <div class="flex gap-spacerS">
+        <img
+          src="./img/user-regular.svg"
+          alt="user"
+          class="cursor-pointer hover:scale-110 duration-300"
+        />
+        <img
+          src="./img/bars-solid.svg"
+          alt="menu"
+          class="cursor-pointer hover:scale-110 duration-300"
+          id="menu"
+        />
+      </div>
+    </header>
+
+    <!-- NAVEGACIÓn -->
+    <div
+      class="fixed flex justify-end w-full right-[-100%] duration-500 z-10"
+      id="toggle"
+    >
+      <nav
+        class="flex flex-col justify-center p-spacerL text-end bg-azul h-screen border-l-2 border-crema"
+      >
+        <a
+          href="./pages/historia.html"
+          class="text-fontL font-bold text-crema hover:bg-crema hover:text-azul duration-300 p-1"
+          >Historia</a
+        >
+        <a
+          href="./pages/artistas.html"
+          class="text-fontL font-bold text-crema hover:bg-crema hover:text-azul duration-300 p-1"
+          >Artistas</a
+        >
+        <a
+          href="./pages/obras.html"
+          class="text-fontL font-bold text-crema hover:bg-crema hover:text-azul duration-300 p-1"
+          >Obras</a
+        >
+        <a
+          href="./pages/articulos.html"
+          class="text-fontL font-bold text-crema hover:bg-crema hover:text-azul duration-300 p-1"
+          >Artículos</a
+        >
+        <a
+          href="./pages/contacto.html"
+          class="text-fontL font-bold text-crema hover:bg-crema hover:text-azul duration-300 p-1"
+          >Contacto</a
+        >
+      </nav>
+    </div>
+
+    <main>
+      <!-- HERO -->
+      <section
+        class="h-screen flex justify-start items-center bg-azul p-spacerL relative"
+      >
+        <div class="flex flex-col gap-spacerS max-w-[800px]">
+          <img src="./img/title.png" alt="title" />
+          <p class="text-crema text-fontM">
+            Conoce acerca de una de las vanguardias artísticas mas influyentes
+            de la sociedad actual
+          </p>
+        </div>
+
+        <img
+          src="./img/angle-down-solid.svg"
+          alt=""
+          class="absolute bottom-10 left-2/4 translate-x-2/4 translate-y-2/4"
+        />
+      </section>
+
+      <!-- ¿QUÉ ES? -->
+      <section
+        class="bg-crema flex justify-center items-center gap-spacerL p-spacerL"
+      >
+        <div class="flex flex-col gap-[0.5rem] max-w-[600px]">
+          <h2 class="text-fontM text-azul font-bold">
+            ¿Qué es el minimalismo?
+          </h2>
+          <p class="text-fontXS text-azul">
+            El minimalismo es una vanguardia artística que surgió en la década
+            de 1960 en Estados Unidos. Se caracteriza por su enfoque en lo
+            esencial, la simplicidad y la reducción de elementos a su mínima
+            expresión. En la pintura, el minimalismo se manifiesta a través de
+            lienzos monocromáticos, con la superficie cubierta por un solo
+            color. El minimalismo también se ha desarrollado en la escultura,
+            donde se utiliza la reducción de elementos y la simplicidad para
+            crear obras de arte que a menudo parecen puras y abstractas. Los
+            minimalistas rechazan la subjetividad y la expresión emocional en el
+            arte, y se enfocan en los aspectos formales y materiales del objeto
+            artístico. La obra de arte minimalista es vista como un objeto
+            autónomo, con una presencia física que puede ser experimentada por
+            el espectador. En esta corriente artística, el espacio y la
+            presencia física de la obra de arte son elementos clave. A menudo se
+            utilizan materiales industriales, como acero, vidrio y plástico,
+            para crear obras de arte que parecen estar en relación directa con
+            su entorno y el espacio que los rodea. En resumen, el minimalismo se
+            enfoca en la reducción de elementos, la simplicidad y la presencia
+            física de la obra de arte. Se caracteriza por su enfoque en los
+            aspectos formales y materiales, y rechaza la subjetividad y la
+            expresión emocional en el arte.
+          </p>
+        </div>
+        <figure class="max-w-[600px]">
+          <img
+            src="./img/arbol.jpg"
+            alt="arbol"
+            class="border-2 border-solid border-azul rounded-xl"
+          />
+        </figure>
+      </section>
+
+      <!-- CARACTERÍSTICAS -->
+      <section class="flex flex-col items-center p-spacerL bg-azul gap-spacerL">
+        <h2 class="text-crema text-fontL font-bold">Características</h2>
+        <div class="flex flex-col gap-spacerL">
+          <!-- CARD -->
+          <div class="flex justify-center items-center gap-spacerL">
+            <div class="flex flex-col gap-[0.5rem] max-w-[600px]">
+              <h2 class="text-fontM text-crema">Simplificación</h2>
+              <p class="text-fontXS text-crema">
+                El minimalismo busca reducir los elementos al mínimo posible,
+                eliminando todo lo que no es esencial y manteniendo solo lo
+                necesario para transmitir el mensaje o la sensación deseada.
+              </p>
+            </div>
+            <figure class="max-w-[500px]">
+              <img
+                src="./img/flecha.jpg"
+                alt="arbol"
+                class="border-2 border-solid border-crema rounded-xl"
+              />
+            </figure>
+          </div>
+
+          <!-- CARD -->
+          <div class="flex justify-center items-center gap-spacerL">
+            <figure class="max-w-[500px]">
+              <img
+                src="./img/cubos-locos.jpeg"
+                alt="arbol"
+                class="border-2 border-solid border-crema rounded-xl"
+              />
+            </figure>
+            <div class="flex flex-col gap-[0.5rem] max-w-[600px]">
+              <h2 class="text-fontM text-crema">Geometría</h2>
+              <p class="text-fontXS text-crema">
+                Las formas geométricas simples, como líneas rectas, círculos y
+                cuadrados, son características del minimalismo. Se utilizan para
+                crear composiciones ordenadas y equilibradas.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="flex justify-center items-center gap-spacerL">
+            <div class="flex flex-col gap-[0.5rem] max-w-[600px]">
+              <h2 class="text-fontM text-crema">Color</h2>
+              <p class="text-fontXS text-crema">
+                El minimalismo utiliza una paleta de colores limitada y a menudo
+                monocromática, con la intención de enfocar la atención en la
+                forma y la estructura de la obra de arte.
+              </p>
+            </div>
+            <figure class="max-w-[500px]">
+              <img
+                src="./img/varios-cuadros.jpg"
+                alt="arbol"
+                class="border-2 border-solid border-crema rounded-xl"
+              />
+            </figure>
+          </div>
+
+          <!-- CARD -->
+          <div class="flex justify-center items-center gap-spacerL">
+            <figure class="max-w-[500px]">
+              <img
+                src="./img/espacio.jpg"
+                alt="arbol"
+                class="border-2 border-solid border-crema rounded-xl"
+              />
+            </figure>
+            <div class="flex flex-col gap-[0.5rem] max-w-[600px]">
+              <h2 class="text-fontM text-crema">Espacio</h2>
+              <p class="text-fontXS text-crema">
+                La relación entre la obra de arte y el espacio que la rodea es
+                importante en el minimalismo. La obra de arte debe ocupar su
+                lugar en el espacio de manera armoniosa y equilibrada.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="flex justify-center items-center gap-spacerL">
+            <div class="flex flex-col gap-[0.5rem] max-w-[600px]">
+              <h2 class="text-fontM text-crema">Economía de medios</h2>
+              <p class="text-fontXS text-crema">
+                El minimalismo busca hacer más con menos, utilizando la economía
+                de medios para lograr el máximo efecto con un mínimo de
+                recursos. Esto puede lograrse mediante el uso de materiales
+                simples y la reducción de elementos a su esencia más simple.
+              </p>
+            </div>
+            <figure class="max-w-[500px]">
+              <img
+                src="./img/cubos-concreto.jpg"
+                alt="arbol"
+                class="border-2 border-solid border-crema rounded-xl"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFLUENCIAS -->
+      <section
+        class="flex flex-col items-center p-spacerL bg-crema gap-spacerL"
+      >
+        <h2 class="text-azul text-fontL font-bold">Influencias</h2>
+        <div class="grid grid-cols-2 gap-spacerL justify-center">
+          <!-- CARD -->
+          <div
+            class="flex flex-col justify-between items-start gap-spacerS max-w-[500px]"
+          >
+            <div class="flex flex-col gap-spacerS max-w-[600px]">
+              <img
+                src="./img/musica.jpg"
+                alt="arbol"
+                class="border-2 border-solid border-azul rounded-xl w-full"
+              />
+              <div>
+                <h2 class="text-fontM text-azul">Música</h2>
+                <p class="text-fontXS text-azul">
+                  El minimalismo ha tenido una gran influencia en la música del
+                  siglo XX y ha sido considerado como uno de los movimientos
+                  musicales más importantes de la contemporaneidad. El
+                  minimalismo musical surge en la década de 1960, en paralelo
+                  con el minimalismo visual y la escultura minimalista. Al igual
+                  que en las artes visuales, se caracteriza por la reducción de
+                  los elementos musicales a su mínima expresión, la repetición
+                  de patrones simples y la exploración de la relación entre
+                  sonido, tiempo y espacio.
+                </p>
+              </div>
+            </div>
+
+            <a
+              class="bg-azul text-crema font-bold hover:text-azul hover:bg-crema px-[1rem] py-[0.2rem] border-4 border-azul hover:border-azul transition-all duration-300 rounded"
+              href="./pages/articulos.html"
+            >
+              Leer Más
+            </a>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="flex flex-col justify-between items-start gap-spacerS max-w-[500px]"
+          >
+            <div class="flex flex-col gap-spacerS max-w-[600px]">
+              <img
+                src="./img/arqui.jpg"
+                alt="arbol"
+                class="border-2 border-solid border-azul rounded-xl w-full"
+              />
+              <div>
+                <h2 class="text-fontM text-azul">Arquitectura</h2>
+                <p class="text-fontXS text-azul">
+                  El minimalismo ha sido uno de los movimientos más importantes
+                  en la arquitectura contemporánea y se caracteriza por la
+                  simplicidad, la limpieza de líneas y la reducción de los
+                  elementos arquitectónicos a su esencia más simple. Los
+                  edificios minimalistas se enfocan en la creación de espacios
+                  abiertos y la maximización de la luz natural, utilizando
+                  materiales simples y cotidianos como el vidrio, el acero y el
+                  hormigón.
+                </p>
+              </div>
+            </div>
+
+            <a
+              class="bg-azul text-crema font-bold hover:text-azul hover:bg-crema px-[1rem] py-[0.2rem] border-4 border-azul hover:border-azul transition-all duration-300 rounded"
+              href="./pages/articulos.html"
+            >
+              Leer Más
+            </a>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="flex flex-col justify-between items-start gap-spacerS max-w-[500px]"
+          >
+            <div class="flex flex-col gap-spacerS max-w-[600px]">
+              <img
+                src="./img/nike.jpeg"
+                alt="arbol"
+                class="border-2 border-solid border-azul rounded-xl w-full"
+              />
+              <div>
+                <h2 class="text-fontM text-azul">Diseño Gráfico</h2>
+                <p class="text-fontXS text-azul">
+                  El diseño gráfico minimalista se enfoca en la simplificación y
+                  la eliminación de elementos innecesarios, lo que da lugar a
+                  diseños limpios y directos. Se utilizan colores limitados y
+                  contrastes claros para crear una jerarquía visual efectiva, y
+                  se presta atención a la tipografía y el espacio en blanco.
+                  Esta tendencia ha sido ampliamente adoptada en el diseño de
+                  logotipos, carteles, interfaces de usuario y otros aspectos
+                  del diseño gráfico contemporáneo.
+                </p>
+              </div>
+            </div>
+
+            <a
+              class="bg-azul text-crema font-bold hover:text-azul hover:bg-crema px-[1rem] py-[0.2rem] border-4 border-azul hover:border-azul transition-all duration-300 rounded"
+              href="./pages/articulos.html"
+            >
+              Leer Más
+            </a>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="flex flex-col justify-between items-start gap-spacerS max-w-[500px]"
+          >
+            <div class="flex flex-col gap-spacerS max-w-[600px]">
+              <img
+                src="./img/deco.jpeg"
+                alt="arbol"
+                class="border-2 border-solid border-azul rounded-xl w-full"
+              />
+              <div>
+                <h2 class="text-fontM text-azul">Decoración</h2>
+                <p class="text-fontXS text-azul">
+                  El minimalismo ha tenido una gran influencia en la decoración,
+                  especialmente en el diseño de interiores. Los espacios
+                  minimalistas suelen estar dominados por colores claros y
+                  neutros, como el blanco y el gris, y se utilizan materiales
+                  naturales y texturas simples para crear una atmósfera serena y
+                  relajante. Los muebles y accesorios son reducidos a su esencia
+                  más simple y se prestan atención a la calidad y la artesanía.
+                </p>
+              </div>
+            </div>
+
+            <a
+              class="bg-azul text-crema font-bold hover:text-azul hover:bg-crema px-[1rem] py-[0.2rem] border-4 border-azul hover:border-azul transition-all duration-300 rounded"
+              href="./pages/articulos.html"
+            >
+              Leer Más
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESTILO DE VIDA -->
+      <section
+        class="bg-azul flex justify-center items-center gap-spacerL p-spacerL"
+      >
+        <div class="flex flex-col gap-[0.5rem] max-w-[600px]">
+          <h2 class="text-fontM text-crema font-bold">Estilo de vida</h2>
+          <p class="text-fontXS text-crema">
+            No solo el minimalismo tuvo influencia en varias disciplinas tanto
+            del arte como del diseño, sino que incluso en el último tiempo se ha
+            vuelto un estilo de vida. Las “personas minimalistas” afirman que
+            vivimos en un entorno demasiado estimulante, en el cual la cultura
+            del consumismo ha generado que consideremos imprescindibles a muchos
+            objetos que en realidad no lo son. En consecuencia, nos llenamos de
+            elementos innecesarios que, a fin de cuentas, únicamente sobrecargan
+            nuestros deseos de obtener más y más, lo que nos hace olvidar otros
+            aspectos esenciales de la vida del ser humano. Estas personas buscan
+            eliminar todo aquello que no sea estrictamente necesario (por
+            ejemplo, evitar la acumulación de objetos inútiles que simplemente
+            fueron guardados por razones emocionales). Sus hogares cuentan con
+            una decoración acorde a la mencionada anteriormente, donde la
+            simplicidad es la ley dominante. Únicamente los elementos que
+            cumplen una función real merecen su espacio, mientras que todo lo
+            demás es removido. Manejan un estricto control del consumismo,
+            evitando adquirir posesiones que realmente no sirven para nada.
+            Además suelen apostar por la tecnología con el objetivo de
+            digitalizar fotos, facturas, tickets, tarjetas, etc, y de esta forma
+            evitar que sus cajones se llenen de estos elementos y queden ahí
+            durante años.
+          </p>
+        </div>
+        <figure class="max-w-[600px]">
+          <img
+            src="./img/estilo.jpg"
+            alt="arbol"
+            class="border-2 border-solid border-crema rounded-xl"
+          />
+        </figure>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="p-spacerS flex justify-between items-center bg-crema">
+      <figure class="max-w-[80px]">
+        <a href="./index.html">
+          <img
+            src="./img/minimal-blue.png"
+            alt="logo"
+            class="hover:scale-110 duration-300"
+          />
+        </a>
+      </figure>
+      <p class="text-fontXS text-azul">
+        Para más información o cualquier duda,
+        <a href="./pages/contacto.html">
+          <span
+            class="font-bold hover:bg-azul hover:text-crema p-1 duration-300"
+            >¡Contáctanos!
+          </span></a
+        >
+      </p>
+      <div class="flex items-center justify-center gap-spacerS">
+        <img
+          src="./img/instagram.svg"
+          alt="instagram"
+          class="hover:scale-110 duration-300 cursor-pointer"
+        />
+        <img
+          src="./img/facebook.svg"
+          alt="facebook"
+          class="hover:scale-110 duration-300 cursor-pointer"
+        />
+        <img
+          src="./img/twitter.svg"
+          alt="twitter"
+          class="hover:scale-110 duration-300 cursor-pointer"
+        />
+      </div>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+  </body>
+</html>
