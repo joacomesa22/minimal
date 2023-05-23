@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/output.css" />
     <link rel="shortcut icon" href="../img/minimal-blue.png" />
-    <title>Contacto - Minimal</title>
+    <title>Login - Minimal</title>
   </head>
   <body class="font-poppins bg-azul">
     <!-- HEADER -->
@@ -75,8 +75,52 @@
       </nav>
     </div>
 
-    <main class="navbar-h h-screen flex items-center justify-center">
-      <div class="flex gap-spacerL items-center justify-center">
+    <main class="navbar-h h-screen flex justify-center items-center">
+      <section class="flex justify-center items-center gap-spacerL">
+        <div class="flex flex-col gap-spacerS">
+          <h1 class="text-fontL font-bold text-crema">Iniciar Sesión</h1>
+
+          <form
+            action="../login.php"
+            method="post"
+            class="flex flex-col gap-spacerS text-crema"
+          >
+            <label class="flex flex-col">
+              <span class="font-bold text-fontXS"> Nombre de usuario </span>
+              <input
+                name="usuario"
+                type="text"
+                maxlength="12"
+                class="rounded p-2 max-w-[1000px] text-azul"
+                required
+              />
+            </label>
+            <label class="flex flex-col">
+              <span class="font-bold text-fontXS"> Contraseña </span>
+              <input
+                type="password"
+                name="password"
+                maxlength="12"
+                class="rounded p-2 max-w-[1000px] text-azul"
+                required
+              />
+            </label>
+            <input
+              type="submit"
+              value="Login"
+              class="bg-crema text-azul font-bold hover:text-crema hover:bg-azul px-[1rem] py-[0.2rem] border-4 border-crema hover:border-crema transition-all duration-300 rounded text-center cursor-pointer"
+            />
+          </form>
+          <p class="text-fontXS text-crema text-center">
+            ¿No tenés cuenta?,
+            <a href="./registro.html">
+              <span
+                class="font-bold hover:bg-crema hover:text-azul p-1 duration-300"
+                >Registrate!
+              </span></a
+            >
+          </p>
+        </div>
         <div>
           <img
             src="../img/mesa-minimalista.jpg"
@@ -84,48 +128,8 @@
             class="max-w-[500px] border-2 border-solid border-crema rounded-xl"
           />
         </div>
-        <div>
-          <h1 class="text-fontL font-bold text-crema">Contacto</h1>
-          <form
-            id="formcontacto"
-            action="../enviar.php"
-            method="post"
-            class="flex flex-col gap-spacerS"
-          >
-            <label class="flex flex-col">
-              <span class="text-crema font-bold text-fontXS">Nombre</span>
-              <input type="text" name="nombre" required class="rounded p-2" />
-            </label>
-            <label class="flex flex-col">
-              <span class="text-crema font-bold text-fontXS">Email</span>
-              <input type="email" name="email" required class="rounded p-2" />
-            </label>
-            <label class="flex flex-col">
-              <span class="text-crema font-bold text-fontXS">Localidad</span>
-              <input
-                type="text"
-                name="localidad"
-                required
-                class="rounded p-2"
-              />
-            </label>
-            <label class="flex flex-col">
-              <span class="text-crema font-bold text-fontXS">Comentario</span>
-              <textarea
-                name="comentario"
-                class="resize-none rounded p-2"
-              ></textarea>
-            </label>
-            <input
-              type="submit"
-              value="Enviar"
-              class="bg-crema text-azul font-bold hover:text-crema hover:bg-azul px-[1rem] py-[0.2rem] border-4 border-crema hover:border-crema transition-all duration-300 rounded text-center cursor-pointer"
-            />
-          </form>
-        </div>
-      </div>
+      </section>
     </main>
-
     <!-- FOOTER -->
     <footer class="p-spacerS flex justify-between items-center bg-crema">
       <figure class="max-w-[80px]">

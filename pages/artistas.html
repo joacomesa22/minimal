@@ -22,12 +22,14 @@
           />
         </a>
       </figure>
-      <div class="flex gap-spacerS">
-        <img
-          src="../img/user-regular.svg"
-          alt="user"
-          class="cursor-pointer hover:scale-110 duration-300"
-        />
+      <div class="flex items-center gap-spacerS">
+        <a href="../pages/login.html">
+          <img
+            src="../img/user-regular.svg"
+            alt="user"
+            class="cursor-pointer hover:scale-110 duration-300"
+          />
+        </a>
         <img
           src="../img/bars-solid.svg"
           alt="menu"
@@ -75,20 +77,40 @@
 
     <main class="navbar-h">
       <section class="flex flex-col gap-spacerM px-spacerL py-spacerM">
-        <div class="text-crema">
-          <h1 class="text-fontL font-bold">Artistas</h1>
-          <p class="text-fontXS max-w-[800px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+        <div class="text-crema flex justify-between items-center">
+          <div>
+            <h1 class="text-fontL font-bold">Artistas</h1>
+            <p class="text-fontXS max-w-[800px]">
+              Estos son algunos de los principales referentes del minimalismo en
+              el arte y la escultura. Para acceder a sus biografías detalladas
+              <strong>
+                ingrese el nombre o el apellido en la barra de búsqueda.</strong
+              >
+            </p>
+          </div>
+          <form
+            action="resultados_buscar.php"
+            method="post"
+            class="flex flex-col gap-2"
+          >
+            <input
+              type="search"
+              name="buscar"
+              placeholder="Buscar biografía..."
+              class="rounded p-2 text-azul w-[300px]"
+            />
+            <input
+              type="submit"
+              value="Enviar"
+              class="bg-crema text-azul font-bold hover:text-crema hover:bg-azul px-[1rem] py-[0.2rem] border-4 border-crema hover:border-crema transition-all duration-300 rounded text-center cursor-pointer w-[100px]"
+            />
+          </form>
         </div>
 
         <div class="cards-container gap-spacerM self-center max-w-[1200px]">
           <!-- CARD -->
           <div
-            class="flex flex-col border-2 border-crema p-spacerS gap-spacerS bg-crema rounded-xl cursor-pointer hover:scale-105 duration-300"
+            class="flex flex-col border-2 border-crema p-spacerS gap-spacerS bg-crema rounded-xl"
           >
             <figure>
               <img
@@ -108,7 +130,7 @@
 
           <!-- CARD -->
           <div
-            class="flex flex-col border-2 border-crema p-spacerS gap-spacerS bg-crema rounded-xl cursor-pointer hover:scale-105 duration-300"
+            class="flex flex-col border-2 border-crema p-spacerS gap-spacerS bg-crema rounded-xl"
           >
             <figure>
               <img
@@ -128,7 +150,7 @@
 
           <!-- CARD -->
           <div
-            class="flex flex-col border-2 border-crema p-spacerS gap-spacerS bg-crema rounded-xl cursor-pointer hover:scale-105 duration-300"
+            class="flex flex-col border-2 border-crema p-spacerS gap-spacerS bg-crema rounded-xl"
           >
             <figure>
               <img
@@ -147,9 +169,7 @@
           </div>
 
           <!-- CARD -->
-          <div
-            class="flex flex-col p-spacerS gap-spacerS bg-crema rounded-xl cursor-pointer hover:scale-105 duration-300"
-          >
+          <div class="flex flex-col p-spacerS gap-spacerS bg-crema rounded-xl">
             <figure>
               <img
                 src="../img/judd.jpg"
@@ -168,7 +188,7 @@
 
           <!-- CARD -->
           <div
-            class="flex flex-col border-2 border-crema p-spacerS gap-spacerS bg-crema rounded-xl cursor-pointer hover:scale-105 duration-300"
+            class="flex flex-col border-2 border-crema p-spacerS gap-spacerS bg-crema rounded-xl"
           >
             <figure>
               <img
@@ -188,7 +208,7 @@
 
           <!-- CARD -->
           <div
-            class="flex flex-col border-2 border-crema p-spacerS gap-spacerS bg-crema rounded-xl cursor-pointer hover:scale-105 duration-300"
+            class="flex flex-col border-2 border-crema p-spacerS gap-spacerS bg-crema rounded-xl"
           >
             <figure>
               <img

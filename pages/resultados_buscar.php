@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/output.css" />
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/output.css" />
     <link rel="shortcut icon" href="../img/minimal-blue.png" />
-    <title>Contacto - Minimal</title>
-  </head>
-  <body class="font-poppins bg-azul">
+	<title>Artista - Minimal</title>
+</head>
+<body class="font-poppins bg-azul">
     <!-- HEADER -->
     <header
       class="flex justify-between p-spacerS bg-azul fixed w-full z-20 border-b-2 border-crema"
@@ -75,59 +75,49 @@
       </nav>
     </div>
 
-    <main class="navbar-h h-screen flex items-center justify-center">
-      <div class="flex gap-spacerL items-center justify-center">
-        <div>
-          <img
-            src="../img/mesa-minimalista.jpg"
-            alt="imagen"
-            class="max-w-[500px] border-2 border-solid border-crema rounded-xl"
-          />
-        </div>
-        <div>
-          <h1 class="text-fontL font-bold text-crema">Contacto</h1>
-          <form
-            id="formcontacto"
-            action="../enviar.php"
-            method="post"
-            class="flex flex-col gap-spacerS"
-          >
-            <label class="flex flex-col">
-              <span class="text-crema font-bold text-fontXS">Nombre</span>
-              <input type="text" name="nombre" required class="rounded p-2" />
-            </label>
-            <label class="flex flex-col">
-              <span class="text-crema font-bold text-fontXS">Email</span>
-              <input type="email" name="email" required class="rounded p-2" />
-            </label>
-            <label class="flex flex-col">
-              <span class="text-crema font-bold text-fontXS">Localidad</span>
-              <input
-                type="text"
-                name="localidad"
-                required
-                class="rounded p-2"
-              />
-            </label>
-            <label class="flex flex-col">
-              <span class="text-crema font-bold text-fontXS">Comentario</span>
-              <textarea
-                name="comentario"
-                class="resize-none rounded p-2"
-              ></textarea>
-            </label>
-            <input
-              type="submit"
-              value="Enviar"
-              class="bg-crema text-azul font-bold hover:text-crema hover:bg-azul px-[1rem] py-[0.2rem] border-4 border-crema hover:border-crema transition-all duration-300 rounded text-center cursor-pointer"
-            />
-          </form>
-        </div>
-      </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="p-spacerS flex justify-between items-center bg-crema">
+	<main class="navbar-h">
+		<section class="flex flex-col gap-spacerS px-spacerL py-spacerM">
+			<div class="text-crema flex justify-start flex-col">
+					<p class="text-fontS font-bold">Su consulta: 
+						<?php
+							$conexion = mysqli_connect('localhost', 'root', '', 'pd3');
+							$buscar = $_POST['buscar'];
+							$consulta = mysqli_query($conexion, "SELECT * FROM artistas WHERE nombre LIKE '%$buscar%' OR apellido LIKE '%$buscar%' ");
+							echo $buscar; // Aparece en HTML
+							?>
+					</p>
+					<p class="text-fontXS">Cantidad de Resultados:
+						<?php
+							$nros=mysqli_num_rows($consulta);
+							echo $nros;
+						?>
+					</p>
+			</div>
+				<?php
+					while($resultados=mysqli_fetch_array($consulta)) {
+				?>
+						<div class="text-crema flex flex-col gap-spacerS">
+							<h1 class="text-fontL font-bold">
+								<?php
+									echo $resultados['nombre'] . " " . $resultados['apellido']
+									?>
+							</h1>
+              <div class="flex flex-col gap-spacerM">
+                <figure>
+                  <img src=<?php echo $resultados["foto"] ?>  alt="artista" class="border-2 border-crema max-w-[1000px]">
+                </figure>
+                <p class="indent-2 max-w-[1000px]"><?php echo $resultados["bio"];?></p>
+              </div>
+            </div>
+					<?php
+				}
+					mysqli_free_result($consulta);
+					mysqli_close($conexion);
+				  ?>
+		</section>
+	</main>
+	    <!-- FOOTER -->
+		<footer class="p-spacerS flex justify-between items-center bg-crema">
       <figure class="max-w-[80px]">
         <a href="../index.html">
           <img
@@ -164,6 +154,7 @@
         />
       </div>
     </footer>
-    <script src="../js/menu.js"></script>
-  </body>
+
+	<script src="../js/menu.js"></script>
+</body>
 </html>
