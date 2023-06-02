@@ -13,16 +13,9 @@
 		$email = $_POST['email'];
 		$usuario = $_POST['usuario'];
 		$password = md5($_POST['password']);
-
-
 		include("conexion.php");	
-
-		// $_SESSION['nombre'] = $nombre
-
 		$consulta = mysqli_query($conexion, "INSERT INTO usuarios (usuario, clave, nombre, apellido, email) VALUES('$usuario','$password','$nombre', '$apellido', '$email')");
-
 		header("Location:pages/login.html");
-
 	?>	
 </body>
 </html>

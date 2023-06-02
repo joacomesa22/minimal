@@ -24,7 +24,7 @@
       </a>
     </figure>
     <div class="flex items-center gap-spacerS">
-      <a href="../pages/login.html">
+      <a href="./panel.php">
         <img
           src="../img/user-regular.svg"
           alt="user"
@@ -76,19 +76,85 @@
     </nav>
   </div>
 
-  <main class="navbar-h bg-azul h-screen flex justify-center items-center">
+  <main class="navbar-h bg-azul h-screen flex justify-center items-center px-spacerL">
     <?php
       if(isset($_SESSION['nombre']) and isset($_SESSION['apellido']) ){
         
-      echo"<div class='flex flex-col items-center gap-spacerS text-crema text-center'>
-							<h1 class='text-fontL font-bold'>".$_SESSION['nombre']." ".$_SESSION['apellido']."</h1>
-							<p class='text-fontS'>Este es el panel de usuario</p>
-							<a href='../salir.php' class='bg-crema text-azul font-bold hover:text-crema hover:bg-azul px-[1rem] py-[0.2rem] border-4 border-crema hover:border-crema transition-all duration-300 rounded w-[180px] text-center'>Cerrar Sesión</a>
-						</div>";
+      echo"<div class='text-crema flex items-center gap-spacerM'>
+              <div class='flex flex-col items-start gap-spacerS'>
+                <div>
+                  <p class='text-fontM font-bold'>Bienvenido,</p>
+                  <h1 class='text-fontL font-bold'>".$_SESSION['nombre']." ".$_SESSION['apellido']."!</h1>
+                </div>
+                <p class='text-fontS max-w-[600px]'>Esperamos que estes disfrutando de nustro sitio y hayas aprendido sobre el Minimalismo!</p>
+                <a href='../salir.php' class='bg-crema text-azul font-bold hover:text-crema hover:bg-azul px-[1rem] py-[0.2rem] border-4 border-crema hover:border-crema transition-all duration-300 rounded w-[10px] text-center'>Cerrar Sesión</a>
+              </div>
+              <div class='flex flex-col gap-spacerS'>
+                <p class='text-fontS font-bold text-center'>Te dejamos tus recomendaciones diarias!</p>
+                <div class='flex gap-spacerS'>
+                  <div class='flex flex-col items-center justify-between p-spacerS border-2 gap-2 bg-crema rounded-xl max-w-[500px] text-azul'>
+                  <img
+                  src='../img/silla.jpeg'
+                  alt='silla'
+                  class='rounded-xl border-2 border-azul'
+                  />
+                  <div class='flex flex-col justify-start h-full'>
+                  <h3 class='font-bold text-fontM'>Vivir con menos</h3>
+                  <p>
+                  Las diferentes ventajas que tiene el estilo de vida minimalista y qué se necesita para poder vivir así de forma efectiva.
+                  </p>
+                  </div>
+                  <a
+                  class='bg-azul text-crema font-bold hover:text-azul hover:bg-crema px-[1rem] py-[0.2rem] border-4 border-azul hover:border-azul transition-all duration-300 rounded text-center w-full'
+                  href='https://www.bbc.com/mundo/noticias/2014/03/140313_economia_vivir_con_menos_jgc'
+                  target='_blank'
+                  >
+                  Seguir Leyendo
+                  </a>
+                  </div>
 
+
+                  <div class='flex flex-col items-center justify-between p-spacerS border-2 gap-2 bg-crema rounded-xl max-w-[500px] text-azul'>
+                  <img
+                  src='../img/calido.jpeg'
+                  alt='silla'
+                  class='rounded-xl border-2 border-azul'
+                  />
+                  <div class='flex flex-col justify-start h-full'>
+                  <h3 class='font-bold text-fontM'>Minimalismo cálido</h3>
+                  <p>
+                  Una tendencia decorativa que viene tomando mucha fuerza en este 2023 y que llegó para quedarse.
+                  </p>
+                  </div>
+                  <a
+                  class='bg-azul text-crema font-bold hover:text-azul hover:bg-crema px-[1rem] py-[0.2rem] border-4 border-azul hover:border-azul transition-all duration-300 rounded text-center w-full'
+                  href='https://www.lamansiondelasideas.com/decoracion-facil/minimalismo-calido-tendencia-protagonista-2023/'
+                  target='_blank'
+                  >
+                  Seguir Leyendo
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>";
       }else{
-        echo "Solo usuarios registrados...";
-        echo "<a href='./login.html'>Iniciar Sesión</a>";
+        echo "<div class='flex flex-col items-center gap-spacerM text-crema'>
+                <div class='flex justify-center'>
+                  <img src='../img/exclamation-mark-svgrepo-com.svg'>
+                  <img src='../img/exclamation-mark-svgrepo-com.svg'>
+                  <img src='../img/exclamation-mark-svgrepo-com.svg'>
+                </div>
+                <div class='flex flex-col items-center text-center gap-spacerS'>
+                  <h2 class='text-fontM font-bold max-w-[500px]'>Para acceder al panel de usuario debes ser un usuario registrado</h2>
+                  <a href='./login.html' class='bg-crema text-azul font-bold hover:text-crema hover:bg-azul px-[1rem] py-[0.2rem] border-4 border-crema hover:border-crema transition-all duration-300 rounded w-[180px] text-center'>Iniciar Sesión</a>
+                  <p class='text-fontXS'>
+                    ¿No tenés cuenta?,
+                    <a href='./registro.html'>
+                    <span class='font-bold hover:bg-crema hover:text-azul p-1 duration-300'>Registrate!</span>
+                    </a>
+                  </p>
+                </div>
+              </div>";
       }
     ?>
   </main>

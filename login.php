@@ -10,8 +10,8 @@
 	<title>Bienvenido - Minimal</title>
 </head>
 <body class="font-poppins">
-	    <!-- HEADER -->
-		<header
+    <!-- HEADER -->
+    <header
       class="flex justify-between p-spacerS bg-azul fixed w-full z-20 border-b-2 border-crema"
     >
       <figure class="max-w-[80px]">
@@ -24,7 +24,7 @@
         </a>
       </figure>
       <div class="flex items-center gap-spacerS">
-        <a href="./pages/login.html">
+        <a href="./pages/panel.php">
           <img
             src="./img/user-regular.svg"
             alt="user"
@@ -77,37 +77,34 @@
     </div>
 
 	<main class="navbar-h bg-crema h-screen flex justify-center items-center">
-
 			<?php
 				$usuario=$_POST['usuario'];
 				$password=md5($_POST['password']);
-
 				include("conexion.php");
-
 				$consulta=mysqli_query($conexion, "SELECT nombre, apellido, email FROM usuarios WHERE usuario='$usuario' AND clave='$password'");
-
 				$resultado=mysqli_num_rows($consulta);
 
 				if($resultado!=0){
 					$respuesta=mysqli_fetch_array($consulta);
-					
 					$_SESSION['nombre']=$respuesta['nombre'];
 					$_SESSION['apellido']=$respuesta['apellido'];
-					echo"<div class='flex flex-col items-center gap-spacerS text-azul text-center'>
-							<h1 class='text-fontL font-bold'>"."Bienvenido ".$_SESSION['nombre']." ".$_SESSION['apellido']."!"."</h1>
-							<p class='text-fontS'>Accedé al panel de usuario!</p>
-							<a href='./pages/panel.php' class='bg-azul text-crema font-bold hover:text-azul hover:bg-crema px-[1rem] py-[0.2rem] border-4 border-azul hover:border-azul transition-all duration-300 rounded w-[180px] text-center'>Panel</a>
-						  </div>";
+          header("Location:./pages/panel.php");
 				}else{	
           echo"<div class='flex flex-col items-center gap-spacerS text-azul text-center'>
-							<h1 class='text-fontL font-bold'>No eres un usuario registrado</h1>
-							<a href='./pages/panel.php' class='bg-azul text-crema font-bold hover:text-azul hover:bg-crema px-[1rem] py-[0.2rem] border-4 border-azul hover:border-azul transition-all duration-300 rounded w-[180px] text-center'>Registrarse</a>
+                <div class='flex justify-center'>
+                 <img src='./img/sad-face-svgrepo-com.svg'>
+                </div>
+                <h1 class='text-fontL font-bold'>No eres un usuario registrado</h1>
+                <a href='./pages/registro.html' class='bg-azul text-crema font-bold hover:text-azul hover:bg-crema px-[1rem] py-[0.2rem] border-4 border-azul hover:border-azul transition-all duration-300 rounded w-[180px] text-center'>Registrarse</a>
+                <p class='text-fontXS text-azul text-center'>
+                ¿Desea volver a intentar?,
+                  <a href='./pages/login.html'>
+                    <span class='font-bold hover:bg-azul hover:text-crema p-1 duration-300'>Iniciar sesión</span></a>
+                </p>
 						  </div>";
 				}
 			?>
-
 	</main>
-
 	    <!-- FOOTER -->
 	<footer class="p-spacerS flex justify-between items-center bg-crema border-t-2 border-azul">
       <figure class="max-w-[80px]">

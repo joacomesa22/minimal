@@ -23,7 +23,7 @@
         </a>
       </figure>
       <div class="flex items-center gap-spacerS">
-        <a href="../pages/login.html">
+        <a href="./panel.php">
           <img
             src="../img/user-regular.svg"
             alt="user"
@@ -77,7 +77,11 @@
 
 	<main class="navbar-h">
 		<section class="flex flex-col gap-spacerS px-spacerL py-spacerM">
-			<div class="text-crema flex justify-start flex-col">
+			<div class="text-crema flex justify-start items-start flex-col gap-2">
+          <a href="./artistas.html" class="flex gap-2 hover:scale-110 duration-300">
+            <img src="../img/arrow-left-solid.svg" alt="arrow">
+            <span class="font-bold">Regresar</span>
+          </a>
 					<p class="text-fontS font-bold">Su consulta: 
 						<?php
 							$conexion = mysqli_connect('localhost', 'root', '', 'pd3');
@@ -92,7 +96,8 @@
 							echo $nros;
 						?>
 					</p>
-			</div>
+
+      </div>
 				<?php
 					while($resultados=mysqli_fetch_array($consulta)) {
 				?>

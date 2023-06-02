@@ -23,7 +23,7 @@
         </a>
       </figure>
       <div class="flex items-center gap-spacerS">
-        <a href="../pages/login.html">
+        <a href="./panel.php">
           <img
             src="../img/user-regular.svg"
             alt="user"
@@ -79,9 +79,9 @@
       <div class="flex gap-spacerL items-center justify-center">
         <div>
           <img
-            src="../img/mesa-minimalista.jpg"
+            src="../img/amazon.jpg"
             alt="imagen"
-            class="max-w-[500px] border-2 border-solid border-crema rounded-xl"
+            class="border-2 border-solid border-crema rounded-xl max-w-[700px]"
           />
         </div>
         <div>
@@ -90,15 +90,15 @@
             id="formcontacto"
             action="../enviar.php"
             method="post"
-            class="flex flex-col gap-spacerS"
+            class="flex flex-col gap-spacerS w-full"
           >
             <label class="flex flex-col">
               <span class="text-crema font-bold text-fontXS">Nombre</span>
-              <input type="text" name="nombre" required class="rounded p-2" />
+              <input type="text" name="nombre" required class="rounded p-1" />
             </label>
             <label class="flex flex-col">
               <span class="text-crema font-bold text-fontXS">Email</span>
-              <input type="email" name="email" required class="rounded p-2" />
+              <input type="email" name="email" required class="rounded p-1" />
             </label>
             <label class="flex flex-col">
               <span class="text-crema font-bold text-fontXS">Localidad</span>
@@ -106,14 +106,14 @@
                 type="text"
                 name="localidad"
                 required
-                class="rounded p-2"
+                class="rounded p-1"
               />
             </label>
             <label class="flex flex-col">
               <span class="text-crema font-bold text-fontXS">Comentario</span>
               <textarea
                 name="comentario"
-                class="resize-none rounded p-2"
+                class="resize-none rounded p-1"
               ></textarea>
             </label>
             <input
