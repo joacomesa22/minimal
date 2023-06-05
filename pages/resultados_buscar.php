@@ -108,9 +108,7 @@
 									?>
 							</h1>
               <div class="flex flex-col gap-spacerM">
-                <figure>
-                  <img src=<?php echo $resultados["foto"] ?>  alt="artista" class="border-2 border-crema max-w-[1000px]">
-                </figure>
+                <img src=<?php echo $resultados["foto"] ?>  alt="artista" class="border-2 border-crema max-w-[1000px]">
                 <p class="indent-2 max-w-[1000px]"><?php echo $resultados["bio"];?></p>
               </div>
             </div>
